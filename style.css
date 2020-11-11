@@ -62,3 +62,87 @@ ul {
 .top-right-info img {
   padding: 0 8px;
 }
+
+/* main header */
+.main-header {
+  padding: 40px 0;
+}
+
+/* main header Logo */
+.logo {
+  width: 145px;
+}
+
+/* main header search Icon and text area */
+.search {
+  width: 40%;
+  display: inline-flex;
+  border-bottom: 1px solid #191919;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url("./fonts/Helvetica.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* main header search input area */
+.search input {
+  font-family: "Helvetica ", sans-serif;
+  border: none;
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* for removing the outline border */
+input:focus {
+  outline: none;
+}
+
+/* main header search icon */
+.search .fa-search {
+  padding-bottom: 10px;
+  color: #edc9d1;
+  font-size: 16px;
+}
+
+/* main header cart icon */
+.cart-icon {
+  display: inline-flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+/* main header cart icon basket */
+.cart-icon img {
+  padding-right: 8px;
+}
+
+/* main header cart icon circle */
+.cart-icon .fa-circle {
+  font-size: 20px;
+  color: #ecc7d0;
+  position: absolute;
+  left: 15px;
+  bottom: -10px;
+}
+
+/* main header cart icon number */
+.cart-icon .number {
+  position: absolute;
+  color: #ffffff;
+  left: 22px;
+  bottom: -6px;
+  font-weight: 700;
+}
+
+.cart-icon p {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
