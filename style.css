@@ -47,7 +47,7 @@ ul {
 .top-left-info li,
 .top-right-info li {
   padding: 11px 15px;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 400;
 }
 
@@ -145,4 +145,92 @@ input:focus {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 15px;
+}
+
+/* main menu */
+.main-menu {
+  height: 108px;
+}
+
+.main-menu #menu {
+  padding-top: 60px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* dropdown and subDropdown background color */
+#menu .drop-down,
+#menu .sub-drop-down {
+  background: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#menu li {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+}
+#menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  color: black;
+}
+/* main dropdown */
+.drop-down {
+  position: absolute;
+  width: 220px;
+  flex-wrap: wrap;
+  left: 0;
+  top: -40px;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: -1;
+  padding-bottom: 25px;
+}
+
+.drop-down li {
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.drop-down li a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  display: block;
+}
+
+/* dropdown hover effect */
+#menu li a:hover {
+  color: #ecc7d0;
+}
+
+#menu li:hover .drop-down {
+  visibility: visible;
+  top: 40px;
+}
+
+#menu .drop-down li:hover {
+  background-color: red;
+  color: #262626;
+}
+
+/* sub dropdown */
+.sub-drop-down {
+  position: absolute;
+  left: 102%;
+  flex-wrap: wrap;
+  top: -20px;
+  width: 100%;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: -1;
+  padding-bottom: 25px;
+}
+
+.drop-down li:hover .sub-drop-down li {
+  top: 0px;
+  visibility: visible;
 }
