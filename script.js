@@ -10,15 +10,13 @@ const subDropDown = document.getElementsByClassName("sub-drop-down")[0];
 const displayDropdown = (event) => {
   event.preventDefault();
 
- if (event.target === menu) {
-    mainMenu.classList.toggle("display");
-  } else if (event.target === dropBtn) {
-    dropDown.classList.toggle("display");
-  } else if (event.target === subDropBtn) {
-    subDropDown.classList.toggle("display");
-  } else {
-    return;
-  }
+  event.target === menu
+    ? mainMenu.classList.toggle("display")
+    : event.target === dropBtn
+    ? dropDown.classList.toggle("display")
+    : event.target === subDropBtn
+    ? subDropDown.classList.toggle("display")
+    : null;
 };
 
 menu.addEventListener("click", displayDropdown);

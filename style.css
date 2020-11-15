@@ -72,12 +72,12 @@ ul {
 
 /* main header Logo */
 .logo {
-  width: 35%;
+  width: 145px;
 }
 
 /* main header search Icon and text area */
 .search {
-  width: 35%;
+  width: 30%;
   display: inline-flex;
   border-bottom: 1px solid #191919;
   justify-content: space-between;
@@ -115,23 +115,26 @@ input:focus {
 
 /* main header cart icon */
 .cart-icon {
-  width: 30%;
+  /* width: 28%;
   justify-content: flex-end;
   margin: 0 auto;
   display: inline-flex;
+  align-items: flex-end; */
+  display: inline-flex;
   align-items: flex-end;
+  position: relative;
 }
 
 /* main header cart icon basket */
 .cart-icon img {
   padding-right: 8px;
 }
-.basket {
+/* .basket {
   display: flex;
   position: relative;
-}
+} */
 /* main header cart icon circle */
-.basket .fa-circle {
+.cart-icon .fa-circle {
   font-size: 20px;
   color: #ecc7d0;
   position: absolute;
@@ -140,7 +143,7 @@ input:focus {
 }
 
 /* main header cart icon number */
-.basket .number {
+.cart-icon .number {
   position: absolute;
   color: #ffffff;
   left: 22px;
@@ -276,7 +279,7 @@ ul li:hover .drop-down {
   }
 
   .search {
-    /* width: 50%; */
+    width: 35%;
     position: absolute;
     bottom: -20px;
     left: 13px;
@@ -284,7 +287,6 @@ ul li:hover .drop-down {
   }
 
   .cart-icon {
-    width: 30%;
     position: absolute;
     bottom: -20px;
     right: 13px;
@@ -311,15 +313,16 @@ ul li:hover .drop-down {
     z-index: 1;
     padding: 0;
   }
-  ul li:hover .drop-down {
+
+  /*  setting the dropdown and sub-drop-down at same position to the menu */
+  ul li:hover .drop-down,
+  .drop-down li:hover .sub-drop-down {
     top: 0px;
   }
+
   #menu .drop-down,
   #menu .sub-drop-down {
     background: black;
-  }
-  .drop-down li:hover .sub-drop-down {
-    top: 0px;
   }
 
   .drop-down li {
@@ -359,5 +362,51 @@ ul li:hover .drop-down {
   /* toggle class */
   .display {
     display: block;
+  }
+}
+/* RWD breakpoints for small screens */
+@media screen and (max-width: 600px) {
+  .top-left-info img,
+  .top-right-info img {
+    width: 30px;
+  }
+
+  .search {
+    width: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 13px;
+    padding: 0 25px;
+  }
+}
+
+/* RWD breakpoints for small screens */
+@media screen and (max-width: 380px) {
+  /* top header ul */
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-header {
+    padding: 20px 0px;
+  }
+  /* main header */
+  .screen {
+    align-items: flex-start;
+  }
+
+  .search {
+    width: 95%;
+    position: relative;
+    left: 0;
+    bottom: 20px;
+    justify-content: space-around;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: -2px;
+    left: 2px;
   }
 }
